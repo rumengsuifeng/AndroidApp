@@ -1,5 +1,6 @@
 package com.example.administrator.helloworld;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -21,6 +22,7 @@ public class HelloWorldActivity extends AppCompatActivity {
     private CheckBox checkBoxled4 = null;
 
     private Button  button_f = null;    //定义一个注销按键
+    private Button button_1 = null;     //定义显式Intent按键
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +61,19 @@ public class HelloWorldActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Code here executes on main thread after user presses button
                 finish();   //注销活动
+            }
+        });
+
+        /*
+        *   使用显式Intent方式进行活动跳转
+        *   new Intent  参数1：提供一个启动活动的上下文      参数2：指定想要启动的目标活动
+        * */
+        button_1 = (Button) findViewById(R.id.button_1);    //获得显式按键的id
+        button_1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Code here executes on main thread after user presses button
+                Intent intent = new Intent(HelloWorldActivity.this, SecondActivity.class);
+                startActivity(intent);      //启动目标活动
             }
         });
 
