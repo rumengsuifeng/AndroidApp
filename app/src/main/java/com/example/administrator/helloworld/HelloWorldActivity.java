@@ -65,6 +65,9 @@ public class HelloWorldActivity extends AppCompatActivity {
         });
     }
 
+    /*  onCreateOptionsMenu方法会显示menu菜单，结尾返回true表示创建菜单
+    *   onOptionsItemSelected方法会得到xml文件中定义的菜单选项的id，然后可以做分别处理
+    * */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -80,8 +83,22 @@ public class HelloWorldActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
+        /*      //源码
         if (id == R.id.action_settings) {
+            Toast.makeText(HelloWorldActivity.this,"Sting...", Toast.LENGTH_SHORT).show();
             return true;
+        }
+        */
+        switch (id){
+            case R.id.action_settings:
+                Toast.makeText(HelloWorldActivity.this,"Sting...", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.add_item:
+                Toast.makeText(HelloWorldActivity.this,"add...", Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.remove_item:
+                Toast.makeText(HelloWorldActivity.this,"remove...", Toast.LENGTH_SHORT).show();
+                return true;
         }
 
         return super.onOptionsItemSelected(item);

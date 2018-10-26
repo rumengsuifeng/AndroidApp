@@ -2,9 +2,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.administrator.helloworld.HelloWorldActivity">
+    <!--
+        item    有几个item右上角的菜单就有几个选项
+        android:orderInCategory     表示优先级，这个数字越大，显示的这个项就越靠下
+        android:title       表示右上角菜单上要显示的内容
+        app:showAsAction="never"    表示使菜单项永远都不出现在ToolBar上,而是在…的子项中显示
+                        “always”    表示使菜单项显示在ToolBar上
+    -->
+
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:title="@string/action_settings"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/add_item"
+        android:orderInCategory="101"
+        android:title="Add"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/remove_item"
+        android:orderInCategory="102"
+        android:title="Remove"
         app:showAsAction="never" />
 </menu>
