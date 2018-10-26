@@ -40,7 +40,6 @@
         android:layout_height="wrap_content"
         android:text="ALL OFF"
         />
-
     <!-- 注释
     CheckBox 表示复选框
     android:text="LED1" 表示复选框上要显示的内容
@@ -73,6 +72,15 @@
         android:layout_height="wrap_content"
         android:text="LED4"
         android:onClick="onCheckboxClicked"
+        />
+
+    <!--    添加一个注销按键
+    -->
+    <Button
+        android:id="@+id/button_f"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="注销"
         />
 
 </LinearLayout>

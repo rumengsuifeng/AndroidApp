@@ -20,6 +20,8 @@ public class HelloWorldActivity extends AppCompatActivity {
     private CheckBox checkBoxled3 = null;
     private CheckBox checkBoxled4 = null;
 
+    private Button  button_f = null;    //定义一个注销按键
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);                 //调用父类onCreate方法
@@ -49,6 +51,14 @@ public class HelloWorldActivity extends AppCompatActivity {
                     checkBoxled3.setChecked(false);
                     checkBoxled4.setChecked(false);
                 }
+            }
+        });
+
+        button_f = (Button) findViewById(R.id.button_f);        //获得注销按键的id
+        button_f.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Code here executes on main thread after user presses button
+                finish();   //注销活动
             }
         });
 
