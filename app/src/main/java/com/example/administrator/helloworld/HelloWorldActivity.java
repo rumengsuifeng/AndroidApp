@@ -72,7 +72,8 @@ public class HelloWorldActivity extends AppCompatActivity {
         button_1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Code here executes on main thread after user presses button
-                Intent intent = new Intent(HelloWorldActivity.this, SecondActivity.class);
+   //             Intent intent = new Intent(HelloWorldActivity.this, SecondActivity.class);        //显式
+                Intent intent = new Intent("com.example.activitytest.ACTION_START");    //隐式
                 startActivity(intent);      //启动目标活动
             }
         });

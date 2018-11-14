@@ -11,7 +11,10 @@
         android:label="@string/app_name" 表示标题栏的内容
         intent-filter 表示为程序注册主活动
     -->
-    <!-- 当添加完第二个活动之后，软件自动生成了activity android:name=".SecondActivity" -->
+    <!-- 当添加完第二个活动之后，软件自动生成了activity android:name=".SecondActivity"
+        添加隐式Intent      com.example.activitytest.ACTION_START
+                            android.intent.category.DEFAULT
+    -->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -25,15 +28,17 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".SecondActivity" />
-        <activity
-            android:name=".ThreeActivity">
+            android:name=".SecondActivity">
+            <intent-filter>
+                <action android:name="com.example.activitytest.ACTION_START" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
+        <activity android:name=".ThreeActivity"></activity>
     </application>
 
 </manifest>
