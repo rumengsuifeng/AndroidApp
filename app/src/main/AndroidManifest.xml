@@ -14,6 +14,7 @@
     <!-- 当添加完第二个活动之后，软件自动生成了activity android:name=".SecondActivity"
         添加隐式Intent      com.example.activitytest.ACTION_START
                             android.intent.category.DEFAULT
+        隐式可以有多个category  com.example.activitytest.MY_CATEGORY
     -->
     <application
         android:allowBackup="true"
@@ -36,6 +37,7 @@
             <intent-filter>
                 <action android:name="com.example.activitytest.ACTION_START" />
                 <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.example.activitytest.MY_CATEGORY" />
             </intent-filter>
         </activity>
         <activity android:name=".ThreeActivity"></activity>

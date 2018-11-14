@@ -74,6 +74,7 @@ public class HelloWorldActivity extends AppCompatActivity {
                 // Code here executes on main thread after user presses button
    //             Intent intent = new Intent(HelloWorldActivity.this, SecondActivity.class);        //显式
                 Intent intent = new Intent("com.example.activitytest.ACTION_START");    //隐式
+                intent.addCategory("com.example.activitytest.MY_CATEGORY");                     //可以有多个Category
                 startActivity(intent);      //启动目标活动
             }
         });
