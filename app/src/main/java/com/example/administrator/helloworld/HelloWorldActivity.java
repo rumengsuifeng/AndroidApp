@@ -1,6 +1,7 @@
 package com.example.administrator.helloworld;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -23,6 +24,7 @@ public class HelloWorldActivity extends AppCompatActivity {
 
     private Button  button_f = null;    //定义一个注销按键
     private Button  button_1 = null;     //定义显式Intent按键
+    private Button  button_6 = null;    //定义打开浏览器的按键
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,6 +80,20 @@ public class HelloWorldActivity extends AppCompatActivity {
                 startActivity(intent);      //启动目标活动
             }
         });
+
+        /*      定义一个打开浏览器的按键
+        *       这段代码可以打开浏览器，网址为http://www.baidu.com
+        * */
+        button_6 = (Button) findViewById(R.id.button_6);
+        button_6.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Code here executes on main thread after user presses button
+                Intent intent = new Intent(Intent.ACTION_VIEW);    //Android系统内置的动作，其常量值为android.intent.action.VIEW
+                intent.setData(Uri.parse("http://www.baidu.com")); //将字符串解析成一个Uri对象
+                startActivity(intent);      //启动目标活动
+            }
+        });
+
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

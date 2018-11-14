@@ -83,6 +83,14 @@
         android:text="下一页"
         />
 
+    <!--    添加一个打开浏览器的按键
+    -->
+    <Button
+        android:id="@+id/button_6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="打开网页"/>
+
     <!--    添加一个注销按键
     -->
     <Button
