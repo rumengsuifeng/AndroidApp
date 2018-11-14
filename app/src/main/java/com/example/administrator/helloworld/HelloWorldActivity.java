@@ -22,7 +22,7 @@ public class HelloWorldActivity extends AppCompatActivity {
     private CheckBox checkBoxled4 = null;
 
     private Button  button_f = null;    //定义一个注销按键
-    private Button button_1 = null;     //定义显式Intent按键
+    private Button  button_1 = null;     //定义显式Intent按键
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

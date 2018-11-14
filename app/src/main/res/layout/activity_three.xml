@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    android:orientation="vertical"      //当采用LinearLayout布局的时候，注意加方向属性，要么会出问题，当添加多个按钮的时候暴露出来了
+    android:orientation="vertical"     当采用LinearLayout布局的时候，注意加方向属性，要么会出问题，当添加多个按钮的时候暴露出来了
 -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -8,19 +8,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SecondActivity">
+    tools:context=".ThreeActivity">
 
     <Button
-        android:id="@+id/button_2"
+        android:id="@+id/button_4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="上一页"
         />
 
     <Button
-        android:id="@+id/button_3"
+        android:id="@+id/button_5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="下一页"
+        android:text="注销"
         />
+
 </LinearLayout>
